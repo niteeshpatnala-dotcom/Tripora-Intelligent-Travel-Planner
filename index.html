@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripora | Intelligent Travel Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">✈ Tripora<span>.</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#explore">Explore</a>
+            <a href="#planner">Plan Trip</a>
+            <a href="#mytrips">My Trips</a>
+        </nav>
+
+        <a href="#planner" class="nav-btn">Start Planning</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">YOUR JOURNEY STARTS HERE</p>
+
+            <h1>Explore the World.<br>
+                <span>One Trip at a Time.</span>
+            </h1>
+
+            <p class="hero-text">
+                Discover amazing destinations and plan your
+                perfect journey with Tripora.
+            </p>
+
+            <a href="#planner" class="main-btn">
+                Plan Your Journey →
+            </a>
+        </div>
+    </section>
+
+    <!-- Explore Section -->
+    <section class="explore" id="explore">
+        <div class="section-heading">
+            <p>EXPLORE THE WORLD</p>
+            <h2>Popular Destinations</h2>
+            <span>Discover beautiful places for your next adventure.</span>
+        </div>
+
+        <div class="destination-container">
+
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=700"
+                     alt="Goa beach">
+                <div class="card-info">
+                    <h3>Goa, India</h3>
+                    <p>Beaches • Adventure • Relaxation</p>
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700"
+                     alt="Mountain landscape">
+                <div class="card-info">
+                    <h3>Manali, India</h3>
+                    <p>Mountains • Nature • Snow</p>
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=700"
+                     alt="Bali landscape">
+                <div class="card-info">
+                    <h3>Bali, Indonesia</h3>
+                    <p>Culture • Beaches • Adventure</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<!-- SMART DASHBOARD -->
+
+<section class="dashboard" id="dashboard">
+
+    <div class="section-heading">
+        <p>YOUR TRAVEL OVERVIEW</p>
+        <h2>Smart Travel Dashboard</h2>
+        <span>Track and manage your adventures.</span>
+    </div>
+
+    <div class="dashboard-container">
+
+        <div class="dashboard-card">
+            <h3>✈ Total Trips</h3>
+            <h2 id="total-trips">0</h2>
+            <p>Saved adventures</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>💰 Total Budget</h3>
+            <h2 id="total-budget">₹0</h2>
+            <p>Planned expenses</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>🌍 Destinations</h3>
+            <h2 id="total-destinations">0</h2>
+            <p>Unique destinations</p>
+        </div>
+
+    </div>
+
+    <div class="budget-chart">
+        <h3>Budget Distribution</h3>
+
+        <div class="budget-bar">
+            <div class="hotel-bar"></div>
+            <div class="food-bar"></div>
+            <div class="transport-bar"></div>
+            <div class="activities-bar"></div>
+        </div>
+
+        <div class="chart-labels">
+            <span>🏨 Hotel 40%</span>
+            <span>🍽 Food 25%</span>
+            <span>🚗 Transport 20%</span>
+            <span>🎯 Activities 15%</span>
+        </div>
+    </div>
+
+</section>
+
+
+    <!-- Trip Planner Section -->
+    <section class="planner" id="planner">
+        <div class="section-heading">
+            <p>CREATE YOUR ADVENTURE</p>
+            <h2>Plan Your Perfect Trip</h2>
+            <span>Your next adventure is just a few clicks away.</span>
+        </div>
+
+        <div class="planner-box">
+            <h3>Where do you want to go?</h3>
+
+            <input type="text" id="destination"
+                   placeholder="Enter destination (e.g. Goa)">
+
+            <input type="number" id="days"
+                   placeholder="Number of days" min="1">
+
+            <input type="number" id="budget"
+                   placeholder="Your budget (₹)" min="1">
+
+            <button onclick="generateTrip()">
+                Generate My Trip →
+            </button>
+
+            <div id="trip-result"></div>
+        </div>
+    </section>
+
+    <!-- My Trips Section -->
+    <section class="mytrips" id="mytrips">
+        <div class="section-heading">
+            <p>YOUR TRAVEL COLLECTION</p>
+            <h2>My Trips</h2>
+        </div>
+
+        <div id="saved-trips">
+            <p>No trips saved yet. Start planning your adventure!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>✈ Tripora.</h2>
+        <p>Travel smarter. Explore further. Create memories.</p>
+        <p>© 2026 Tripora. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

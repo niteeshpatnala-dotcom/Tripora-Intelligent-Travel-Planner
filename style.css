@@ -1,0 +1,398 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f9fc;
+    color: #172033;
+}
+
+/* Navigation */
+
+.navbar {
+    height: 75px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    color: #152b45;
+}
+
+.logo span {
+    color: #ff783d;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #344054;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff783d;
+}
+
+.nav-btn, .main-btn {
+    text-decoration: none;
+    background: #ff783d;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-btn:hover, .main-btn:hover {
+    background: #e85e25;
+    transform: translateY(-3px);
+}
+
+/* Hero */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    color: white;
+
+    background:
+    linear-gradient(90deg,
+    rgba(5,20,35,0.85),
+    rgba(5,20,35,0.2)),
+    url("https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600")
+    center/cover;
+}
+
+.hero-content {
+    max-width: 650px;
+    animation: appear 1s ease;
+}
+
+.tagline, .section-heading p {
+    color: #ff783d;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #ff985f;
+}
+
+.hero-text {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    color: #eeeeee;
+}
+
+/* Sections */
+
+.explore, .planner, .mytrips {
+    padding: 85px 9%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+    margin-bottom: 12px;
+    color: #152b45;
+}
+
+.section-heading span {
+    color: #667085;
+}
+
+/* Destination Cards */
+
+.destination-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 22px;
+}
+
+.card-info h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.card-info p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Trip Planner */
+
+.planner {
+    background: #edf2f8;
+}
+
+.planner-box {
+    max-width: 550px;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    margin: auto;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+.planner-box h3 {
+    margin-bottom: 22px;
+    font-size: 22px;
+}
+
+.planner-box input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    font-size: 15px;
+    outline: none;
+}
+
+.planner-box input:focus {
+    border-color: #ff783d;
+}
+
+.planner-box button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 9px;
+    background: #ff783d;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.planner-box button:hover {
+    background: #e85e25;
+}
+
+#trip-result {
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* Saved Trips */
+
+#saved-trips {
+    text-align: center;
+    color: #667085;
+    padding: 20px;
+}
+
+/* Footer */
+
+footer {
+    background: #152b45;
+    color: white;
+    text-align: center;
+    padding: 35px;
+    line-height: 2;
+}
+
+footer h2 {
+    color: #ff985f;
+}
+
+/* Animation */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 5%;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .destination-container {
+        grid-template-columns: 1fr;
+    }
+
+    .explore, .planner, .mytrips {
+        padding: 55px 6%;
+    }
+}
+
+/* SMART DASHBOARD */
+
+.dashboard {
+    padding: 85px 9%;
+    background: #ffffff;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.dashboard-card {
+    padding: 30px;
+    background: linear-gradient(135deg, #152b45, #294c70);
+    color: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-7px);
+}
+
+.dashboard-card h3 {
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+.dashboard-card h2 {
+    font-size: 35px;
+    color: #ff985f;
+    margin-bottom: 8px;
+}
+
+.dashboard-card p {
+    color: #dce5ef;
+}
+
+.budget-chart {
+    padding: 30px;
+    background: #f8f9fc;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.budget-chart h3 {
+    margin-bottom: 25px;
+    color: #152b45;
+}
+
+.budget-bar {
+    height: 22px;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.hotel-bar {
+    width: 40%;
+    background: #ff783d;
+}
+
+.food-bar {
+    width: 25%;
+    background: #f4bd58;
+}
+
+.transport-bar {
+    width: 20%;
+    background: #438acb;
+}
+
+.activities-bar {
+    width: 15%;
+    background: #45b99a;
+}
+
+.chart-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #475467;
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
+}
